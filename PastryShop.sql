@@ -43,7 +43,12 @@ INSERT INTO `Categories` (`category_id`, `category_name`) VALUES
 (1, 'Cakes'),
 (2, 'Cookies'),
 (3, 'Muffins'),
-(4, 'Pastries');
+(4, 'Pastries'),
+(6, 'Cupcakes'),
+(7, 'Pies'),
+(8, 'Tarts'),
+(9, 'Croissants'),
+(10, 'Donuts');
 
 -- --------------------------------------------------------
 
@@ -68,7 +73,12 @@ INSERT INTO `InventoryLog` (`log_id`, `pastry_id`, `change_quantity`, `reason`, 
 (2, 2, -3, 'Sold to customer', '2024-11-07 00:10:16'),
 (3, 3, -2, 'Sold to customer', '2024-11-07 00:10:16'),
 (4, 4, -1, 'Sold to customer', '2024-11-07 00:10:16'),
-(5, 5, -1, 'Sold to customer', '2024-11-07 00:10:16');
+(5, 5, -1, 'Sold to customer', '2024-11-07 00:10:16'),
+(6, 6, 10, 'New stock', '2024-11-07 00:10:16'),
+(7, 7, 15, 'New stock', '2024-11-07 00:10:16'),
+(8, 8, -5, 'Sold to customer', '2024-11-07 00:10:16'),
+(9, 9, -10, 'Sold to customer', '2024-11-07 00:10:16'),
+(10, 10, 20, 'New stock', '2024-11-07 00:10:16');
 
 -- --------------------------------------------------------
 
@@ -96,7 +106,12 @@ INSERT INTO `Pastries` (`pastry_id`, `name`, `description`, `price`, `category_i
 (2, 'Sugar Cookies', 'Sweet vanilla cookies with sugar sprinkles.', 5.00, 2, 1, NULL, 50),
 (3, 'Blueberry Muffin', 'Soft and fluffy muffins with fresh blueberries.', 4.50, 3, 1, NULL, 30),
 (4, 'Cheese Danish', 'Flaky pastry filled with cream cheese.', 3.50, 4, 1, NULL, 25),
-(5, 'Brownie', 'Chocolate brownie with a fudge center.', 6.00, 5, 1, NULL, 10);
+(5, 'Brownie', 'Chocolate brownie with a fudge center.', 6.00, 5, 1, NULL, 10),
+(6, 'Chocolate Cupcake', 'Fluffy chocolate cupcake with buttercream frosting.', 3.50, 6, 1, NULL, 50),
+(7, 'Apple Pie', 'Classic apple pie with a flaky crust.', 8.00, 7, 1, NULL, 10),
+(8, 'Lemon Tart', 'Tart with a smooth lemon filling.', 3.50, 8, 1, NULL, 15),
+(9, 'Butter Croissant', 'Golden-brown croissant.', 2.50, 9, 1, NULL, 20),
+(10, 'Glazed Donut', 'Classing donut with a sweet glaze.', 1.50, 10, 1, NULL, 30);
 
 -- --------------------------------------------------------
 
@@ -121,7 +136,12 @@ INSERT INTO `ShoppingCart` (`cart_id`, `user_id`, `pastry_id`, `quantity`, `date
 (2, 3, 2, 3, '2024-11-07 00:10:16'),
 (3, 4, 3, 1, '2024-11-07 00:10:16'),
 (4, 5, 4, 2, '2024-11-07 00:10:16'),
-(5, 2, 5, 1, '2024-11-07 00:10:16');
+(5, 2, 5, 1, '2024-11-07 00:10:16'),
+(6, 6, 6, 2, '2024-11-07 00:10:16'),
+(7, 7, 7, 1, '2024-11-07 00:10:16'),
+(8, 8, 8, 5, '2024-11-07 00:10:16'),
+(9, 9, 9, 4, '2024-11-07 00:10:16'),
+(10, 10, 10, 12, '2024-11-07 00:10:16');
 
 -- --------------------------------------------------------
 
@@ -149,7 +169,14 @@ INSERT INTO `Users` (`user_id`, `username`, `password_hash`, `email`, `role`, `f
 (2, 'customer1', 'hashedpassword2', 'customer1@example.com', 'customer', 'John', 'Doe', '2024-11-07 00:10:16'),
 (3, 'customer2', 'hashedpassword3', 'customer2@example.com', 'customer', 'Jane', 'Doe', '2024-11-07 00:10:16'),
 (4, 'customer3', 'hashedpassword4', 'customer3@example.com', 'customer', 'Michael', 'Smith', '2024-11-07 00:10:16'),
-(5, 'customer4', 'hashedpassword5', 'customer4@example.com', 'customer', 'Sarah', 'Johnson', '2024-11-07 00:10:16');
+(5, 'customer4', 'hashedpassword5', 'customer4@example.com', 'customer', 'Sarah', 'Johnson', '2024-11-07 00:10:16'),
+(6, 'customer5', 'hashedpassword6', 'customer5@example.com', 'customer', 'Kate', 'Smith', '2024-11-07 00:10:16'),
+(7, 'customer6', 'hashedpassword7', 'customer6@example.com', 'customer', 'Mario', 'Hernandez', '2024-11-07 00:10:16'),
+(8, 'customer7', 'hashedpassword8', 'customer7@example.com', 'customer', 'George', 'Lopez', '2024-11-07 00:10:16'),
+(9, 'customer8', 'hashedpassword9', 'customer8@example.com', 'customer', 'Andrew', 'Anderson', '2024-11-07 00:10:16'),
+(10, 'customer9', 'hashedpassword10', 'customer9@example.com', 'customer', 'Mark', 'Hall', '2024-11-07 00:10:16');
+
+
 
 --
 -- Indexes for dumped tables
