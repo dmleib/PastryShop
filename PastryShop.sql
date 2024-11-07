@@ -107,7 +107,7 @@ INSERT INTO `Pastries` (`pastry_id`, `name`, `description`, `price`, `category_i
 (3, 'Blueberry Muffin', 'Soft and fluffy muffins with fresh blueberries.', 4.50, 3, 1, NULL, 30),
 (4, 'Cheese Danish', 'Flaky pastry filled with cream cheese.', 3.50, 4, 1, NULL, 25),
 (5, 'Brownie', 'Chocolate brownie with a fudge center.', 6.00, 5, 1, NULL, 10),
-(6, 'Chocolate Cupcake', 'Fluppy chocolate cupcake with buttercream frosting.', 3.50, 6, 1, NULL, 50),
+(6, 'Chocolate Cupcake', 'Fluffy chocolate cupcake with buttercream frosting.', 3.50, 6, 1, NULL, 50),
 (7, 'Apple Pie', 'Classic apple pie with a flaky crust.', 8.00, 7, 1, NULL, 10),
 (8, 'Lemon Tart', 'Tart with a smooth lemon filling.', 3.50, 8, 1, NULL, 15),
 (9, 'Butter Croissant', 'Golden-brown croissant.', 2.50, 9, 1, NULL, 20),
