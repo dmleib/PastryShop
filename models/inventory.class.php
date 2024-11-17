@@ -6,21 +6,21 @@
  * Description: This class represents the Inventory
  */
 class Inventory {
-  private int $inventoryId, $pastryId, $changeQuantity;
+  private int $logId, $pastryId, $changeQuantity;
   private string $reason, $timeUpdated;
 
   //Constructor
-  public function __constructor ($inventoryId, $pastryId, $changeQuantity, $reason, $timeUpdated){
-    $this->inventoryId = $inventoryId;
+  public function __construct ($logId, $pastryId, $changeQuantity, $reason, $timeUpdated){
+    $this->logId = $logId;
     $this->pastryId = $pastryId;
     $this->changeQuantity = $changeQuantity;
     $this->reason = $reason;
     $this->timeUpdated = $timeUpdated;
     }
 
-//Get Inventory ID
-  public function getInventoryId(): int {
-        return $this->inventoryId;
+//Get Log ID
+  public function getLogId(): int {
+        return $this->logId;
     }
 
   //Get Pasry ID
