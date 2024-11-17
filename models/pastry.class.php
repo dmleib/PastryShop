@@ -10,17 +10,17 @@ class Pastry{
   private string $name;
   private ?string $description, $imagePath;
   private float $price;
-  private bool $availability;
+  private bool $in_menu;
 
 //Constructor
-  public function __construct ($pastryId, $categoryId, $stockQuantity. $name, $description, $imagePath,
-                             $price, $avaibility){
+  public function __construct ($pastryId, $categoryId, $stockQuantity, $name, $description, $imagePath,
+                             $price, $in_menu){
     $this->pastryId = $pastryId;
     $this->name = $name;
     $this->description = $description;
     $this->price = $price;
     $this->categoryId = $categoryId;
-    $this->availability = $availability;
+    $this->in_menu = $in_menu;
     $this->imagePath = $imagePath;
     $this->stockQuantity = $stockQuantity;
     }
@@ -46,8 +46,8 @@ class Pastry{
         return $this->categoryId;
     }
   //Get Availbility
-  public function isAvailable(): bool {
-        return $this->availability;
+  public function isInMenu(): bool {
+        return $this->in_menu;
     }
   //Get image Path
   public function getImagePath(): ?string {
@@ -74,8 +74,8 @@ class Pastry{
         $this->categoryId = $categoryId;
     }
   //Set Availability 
-  public function setAvailability(bool $availability): void {
-        $this->availability = $availability;
+  public function setInMenu(bool $in_menu): void {
+        $this->in_menu = $in_menu;
     }
   //Set Image Path
   public function setImagePath(?string $imagePath): void {
