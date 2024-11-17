@@ -19,7 +19,7 @@ class InventoryLogModel {
    // Method to log a change in inventory
     public function log_inventory_change($pastryId, $changeQuantity, $reason) {
         // SQL insert statement
-        $sql = "INSERT INTO $this->table (pastry_id, change_quantity, reason, date_updated) 
+        $sql = "INSERT INTO $this->table (pastry_id, change_quantity, reason, time_updated) 
                 VALUES ($pastryId, $changeQuantity, '$reason', NOW())";
 
         // Execute the query and return the result
