@@ -17,10 +17,10 @@ class PastryModel {
     }
   
   // Method to add a new pastry
-    public function add_pastry($name, $description, $price, $categoryId, $availability = 1, $imagePath = null, $stockQuantity = 0) {
+    public function add_pastry($name, $description, $price, $categoryId, $availability = 1, $imagePath = null) {
         // SQL insert statement
-        $sql = "INSERT INTO $this->table (name, description, price, category_id, in_menu, imagePath, stock_quantity)
-                VALUES ('$name', '$description', $price, $categoryId, $in_menu, '$imagePath', $stockQuantity)";
+        $sql = "INSERT INTO $this->table (name, description, price, category_id, in_menu, imagePath)
+                VALUES ('$name', '$description', $price, $categoryId, $in_menu, '$imagePath')";
 
         // Execute the query and return the result
         $query = $this->dbConnection->query($sql);
@@ -40,7 +40,7 @@ class PastryModel {
         $result = $this->dbConnection->query($sql);
 
         if ($result && $result->num_rows > 0) {
-            return $result->fetch_assoc(); // Return the pastry as an associative array
+            return $result->fetch_assoc(); 
         }
         return null;
     }
@@ -64,11 +64,11 @@ class PastryModel {
     }
 
    // Method to update a pastry by ID
-    public function update_pastry($pastryId, $name, $description, $price, $categoryId, $availability, $imageFileName, $stockQuantity) {
+    public function update_pastry($pastryId, $name, $description, $price, $categoryId, $in_menu, $imageFileName) {
         // SQL update statement
         $sql = "UPDATE $this->table 
                 SET name = '$name', description = '$description', price = $price, category_id = $categoryId,
-                    in_menu = $in_menu, imagePath = '$imagePath', stock_quantity = $stockQuantity
+                    in_menu = $in_menu, imagePath = '$imagePath'
                 WHERE pastry_id = $pastryId";
 
         // Execute the query and return the result
