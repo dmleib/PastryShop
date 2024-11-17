@@ -19,8 +19,8 @@ class PastryModel {
   // Method to add a new pastry
     public function add_pastry($name, $description, $price, $categoryId, $availability = 1, $imagePath = null, $stockQuantity = 0) {
         // SQL insert statement
-        $sql = "INSERT INTO $this->table (name, description, price, category_id, availability, image_url, stock_quantity)
-                VALUES ('$name', '$description', $price, $categoryId, $availability, '$imagePath', $stockQuantity)";
+        $sql = "INSERT INTO $this->table (name, description, price, category_id, in_menu, imagePath, stock_quantity)
+                VALUES ('$name', '$description', $price, $categoryId, $in_menu, '$imagePath', $stockQuantity)";
 
         // Execute the query and return the result
         $query = $this->dbConnection->query($sql);
@@ -68,7 +68,7 @@ class PastryModel {
         // SQL update statement
         $sql = "UPDATE $this->table 
                 SET name = '$name', description = '$description', price = $price, category_id = $categoryId,
-                    availability = $availability, image_url = '$imagePath', stock_quantity = $stockQuantity
+                    in_menu = $in_menu, imagePath = '$imagePath', stock_quantity = $stockQuantity
                 WHERE pastry_id = $pastryId";
 
         // Execute the query and return the result
