@@ -43,7 +43,7 @@ public function getRole(): string {
         return $this->role;
     }
 //Get First name
-public function setFirstName(?string $firstName): void {
+public function getFirstName(): ?string {
         $this->firstName = $firstName;
     }
 //Get Last name
