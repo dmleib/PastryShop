@@ -12,7 +12,7 @@ class User {
   private ?string $firstName, $lastName;
 
   //constructor
-  public function __construct (int $userID,  $username, 
+public function __construct(int $userId, string $username, string $passwordHash, string $email, string $role, ?string $firstName, ?string $lastName, string $dateCreated) {
     $this->userId = $userId;
     $this->username = $username;
     $this->passwordHash = $passwordHash;
@@ -21,7 +21,7 @@ class User {
     $this->firstName = $firstName;
     $this->lastName = $lastName;
     $this->dateCreated = $dateCreated;
-    }
+}
 // Get user ID
 public function getUserId(): int {
         return $this->userId;
