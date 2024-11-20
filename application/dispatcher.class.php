@@ -5,10 +5,6 @@
  * File: dispatcher.class.php
  * Description:
  */
-
-
-namespace PastryShop;
-
 class Dispatcher
 {
     public function dispatch()

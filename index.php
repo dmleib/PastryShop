@@ -1,12 +1,13 @@
 <?php
 
-require_once ("application/config.php");
+require_once ("application/config/config.php");
 
-//load autoloader
+// Load autoloader
 require_once ("vendor/autoload.php");
 
-//load the dispatcher that dissects a request URL
+// Load the dispatcher that dissects a request URL
 new Dispatcher();
+
 // Testing the User class
 try {
     // Create a new User object
@@ -30,6 +31,7 @@ try {
     echo "<p>First Name: " . $user->getFirstName() . "</p>";
     echo "<p>Last Name: " . $user->getLastName() . "</p>";
     echo "<p>Date Created: " . $user->getDateCreated() . "</p>";
+    echo "<hr>";
 
     // Test setters
     echo "<h2>Updating User Details</h2>";
@@ -44,15 +46,18 @@ try {
     echo "<p>Updated Role: " . $user->getRole() . "</p>";
     echo "<p>Updated First Name: " . $user->getFirstName() . "</p>";
     echo "<p>Updated Last Name: " . $user->getLastName() . "</p>";
+    echo "<hr>";
 
     // Test password verification
     echo "<h2>Password Verification</h2>";
     $password = 'securepassword123';
+    $user->setPasswordHash($password);  // Set password hash before verification
     if ($user->verifyPassword($password)) {
         echo "<p>Password verified successfully!</p>";
     } else {
         echo "<p>Invalid password!</p>";
     }
+    echo "<hr>";
 
     // Test invalid role (should throw an exception)
     echo "<h2>Testing Invalid Role</h2>";
@@ -60,4 +65,3 @@ try {
 } catch (Exception $e) {
     echo "<p style='color: red;'>Error: " . $e->getMessage() . "</p>";
 }
-
