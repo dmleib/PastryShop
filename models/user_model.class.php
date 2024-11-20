@@ -5,7 +5,7 @@
  * File: user_model.class.php
  * Description: This class handles user data interactions with the database
  */
-lass UserModel {
+class UserModel {
     private Database $db; // Database object
     private mysqli $dbConnection; // Database connection object
 
@@ -83,4 +83,4 @@ lass UserModel {
         return false;
     }
 }
-?>
+

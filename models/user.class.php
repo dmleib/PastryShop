@@ -7,67 +7,67 @@
  */
 
 class User {
-  private int $userId;
-  private string $passwordHash, $email, $role, $dateCreated;
-  private ?string $firstName, $lastName;
+    private int $userId;
+    private string $passwordHash, $email, $role, $dateCreated;
+    private ?string $firstName, $lastName;
 
-  //constructor
-  public function __construct (int $userID,  $username, 
-    $this->userId = $userId;
-    $this->username = $username;
-    $this->passwordHash = $passwordHash;
-    $this->email = $email;
-    $this->role = $role;
-    $this->firstName = $firstName;
-    $this->lastName = $lastName;
-    $this->dateCreated = $dateCreated;
+    //constructor
+    public function __construct(int $userId, string $username, string $passwordHash, string $email, string $role, ?string $firstName, ?string $lastName, string $dateCreated) {
+        $this->userId = $userId;
+        $this->username = $username;
+        $this->passwordHash = $passwordHash;
+        $this->email = $email;
+        $this->role = $role;
+        $this->firstName = $firstName;
+        $this->lastName = $lastName;
+        $this->dateCreated = $dateCreated;
     }
 // Get user ID
-public function getUserId(): int {
+    public function getUserId(): int {
         return $this->userId;
     }
 // Get username
- public function getUsername(): string {
+    public function getUsername(): string {
         return $this->username;
     }
 //Get Password
-public function getPasswordHash(): string {
+    public function getPasswordHash(): string {
         return $this->passwordHash;
     }
 // Get email
-public function getEmail(): string {
+    public function getEmail(): string {
         return $this->email;
     }
 //Get Role
-public function getRole(): string {
+    public function getRole(): string {
         return $this->role;
     }
 //Get First name
-public function getFirstName(): ?string {
-        $this->firstName = $firstName;
+    public function getFirstName(): ?string {
+        return $this->firstName;
     }
 //Get Last name
-public function getLastName(): ?string {
+    public function getLastName(): ?string {
         return $this->lastName;
     }
 //Get date created
-public function getDateCreated(): string {
+    public function getDateCreated(): string {
         return $this->dateCreated;
     }
 //Set username
-public function setUsername(string $username): void {
+    public function setUsername(string $username): void {
         $this->username = $username;
     }
 //Set Password Hash
-public function setPasswordHash(string $password): void {
+    public function setPasswordHash(string $password): void {
         $this->passwordHash = password_hash($password, PASSWORD_DEFAULT);
     }
 //Set email
-public function setEmail(string $email): void {
+    public function setEmail(string $email): void {
         $this->email = $email;
     }
 //Set Role
-public function setRole(string $role): void {
+    public function setRole(string $role): void {
         if (in_array($role, ['admin', 'employee', 'customer'])) {
             $this->role = $role;
         } else {
@@ -75,24 +75,16 @@ public function setRole(string $role): void {
         }
     }
 //Set First Name
-public function setFirstName(?string $firstName): void {
+    public function setFirstName(?string $firstName): void {
         $this->firstName = $firstName;
     }
 //Set Last Name
-public function setLastName(?string $lastName): void {
+    public function setLastName(?string $lastName): void {
         $this->lastName = $lastName;
     }
 //Verify Password Method
-public function verifyPassword(string $password): bool {
-      return password_verify($password, $this->passwordHash);
+    public function verifyPassword(string $password): bool {
+        return password_verify($password, $this->passwordHash);
     }
 }
 ?>
-
-
-
-
-
-
-
-
