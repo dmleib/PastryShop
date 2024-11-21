@@ -67,7 +67,7 @@ class IndexView {
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto p-4 p-lg-0">
-                        <a href="<?= BASE_URL ?>/views/welcome" class="nav-item nav-link active">Home</a>
+                        <a href="<?= BASE_URL ?>/pastry/index" class="nav-item nav-link active">Home</a>
                         <a href="<?= BASE_URL ?>/views/index" class="nav-item nav-link">Menu</a>
                         <a href="<?= BASE_URL ?>/about/index" class="nav-item nav-link">About Us</a>
                         <a href="<?= BASE_URL ?>/user/login" class="nav-item nav-link">Login/Register</a>
