@@ -19,10 +19,10 @@ return array(
     'InventoryLogModel' => $baseDir . '/models/inventorylog_model.class.php',
     'Pastry' => $baseDir . '/models/pastry.class.php',
     'PastryController' => $baseDir . '/controllers/pastry_controller.class.php',
-    'PastryIndex' => $baseDir . '/views/pastry/index_view.class.php',
     'PastryModel' => $baseDir . '/models/pastry_model.class.php',
     'User' => $baseDir . '/models/user.class.php',
     'UserController' => $baseDir . '/controllers/user_controller.class.php',
     'UserModel' => $baseDir . '/models/user_model.class.php',
+    'WelcomeController' => $baseDir . '/controllers/welcome_controller.class.php',
     'WelcomeIndex' => $baseDir . '/views/welcome/welcome_index.class.php',
 );
