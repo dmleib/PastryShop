@@ -67,8 +67,8 @@ class IndexView {
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto p-4 p-lg-0">
-                        <a href="<?= BASE_URL ?>/views/welcome/welcome_index.class.php" class="nav-item nav-link active">Home</a>
-                        <a href="<?= BASE_URL ?>/views/index/pastry_index.class.php" class="nav-item nav-link">Menu</a>
+                        <a href="<?= BASE_URL ?>/views/welcome" class="nav-item nav-link active">Home</a>
+                        <a href="<?= BASE_URL ?>/views/index" class="nav-item nav-link">Menu</a>
                         <a href="<?= BASE_URL ?>/about/index" class="nav-item nav-link">About Us</a>
                         <a href="<?= BASE_URL ?>/user/login" class="nav-item nav-link">Login/Register</a>
                     </div>
@@ -102,7 +102,7 @@ class IndexView {
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h4 class="text-light mb-4">Quick Links</h4>
-                        <a class="btn btn-link" href="<?= BASE_URL ?>/views/index/pastry_index.class.php">Menu</a>
+                        <a class="btn btn-link" href="<?= BASE_URL ?>/views/index">Menu</a>
                         <a class="btn btn-link" href="<?= BASE_URL ?>/about/index">About Us</a>
                     </div>
                 </div>
