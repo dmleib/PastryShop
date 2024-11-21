@@ -8,3 +8,9 @@
 /dataSources.local.xml
 # IGNORE IDEA
 /.idea
+/deployment.xml
+/modules.xml
+/PastryShop.iml
+/php.xml
+/vcs.xml
+/webServers.xml
