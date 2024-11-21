@@ -21,7 +21,7 @@ class PastryController
     // Get a list of pastries
     public function listPastries()
     {
-        return $this->pastryModel->getAllPastries();
+        return $this->pastryModel->get_all_pastries();
     }
 
     // Add a new pastry
