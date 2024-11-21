@@ -15,14 +15,17 @@ class ComposerStaticInit483b120bc472dd8233e888395dc31e9d
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Database' => __DIR__ . '/../..' . '/application/database/database.class.php',
         'Dispatcher' => __DIR__ . '/../..' . '/application/dispatcher.class.php',
+        'IndexView' => __DIR__ . '/../..' . '/views/index_view.class.php',
         'Inventory' => __DIR__ . '/../..' . '/models/inventory.class.php',
         'InventoryLogModel' => __DIR__ . '/../..' . '/models/inventorylog_model.class.php',
         'Pastry' => __DIR__ . '/../..' . '/models/pastry.class.php',
         'PastryController' => __DIR__ . '/../..' . '/controllers/pastry_controller.class.php',
+        'PastryIndex' => __DIR__ . '/../..' . '/views/pastry/index_view.class.php',
         'PastryModel' => __DIR__ . '/../..' . '/models/pastry_model.class.php',
         'User' => __DIR__ . '/../..' . '/models/user.class.php',
         'UserController' => __DIR__ . '/../..' . '/controllers/user_controller.class.php',
         'UserModel' => __DIR__ . '/../..' . '/models/user_model.class.php',
+        'WelcomeIndex' => __DIR__ . '/../..' . '/views/welcome/welcome_index.class.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
