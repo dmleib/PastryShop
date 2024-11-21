@@ -6,6 +6,11 @@
  * Description:
  */
 class Dispatcher {
+    public function index(): void
+    {
+        $view = new WelcomeIndex();
+        $view->display();
+    }
 
     public function __construct() {
         self::dispatch();

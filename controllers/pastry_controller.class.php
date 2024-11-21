@@ -11,12 +11,6 @@ require_once 'models/pastry_model.class.php';
 
 class PastryController
 {
-    public function index(): void
-    {
-        $view = new WelcomeIndex();
-        $view->display();
-    }
-
     private $pastryModel;
 
     public function __construct()
@@ -27,7 +21,7 @@ class PastryController
     // Get a list of pastries
     public function listPastries()
     {
-        return $this->pastryModel->get_all_pastries();
+        return $this->pastryModel->getAllPastries();
     }
 
     // Add a new pastry
