@@ -11,6 +11,12 @@ require_once 'models/pastry_model.class.php';
 
 class PastryController
 {
+    public function index(): void
+    {
+        $view = new WelcomeIndex();
+        $view->display();
+    }
+
     private $pastryModel;
 
     public function __construct()

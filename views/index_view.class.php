@@ -16,10 +16,13 @@ class IndexView {
             <title> <?php echo $page_title; ?> </title>
             <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
             <meta name="description" content="An MVC-based pastry shop application with RESTful routing.">
-            <link rel="shortcut icon" href="<?= BASE_URL ?>/www/img/favicon.ico" type="image/x-icon">
+            <link type='text/css' rel='stylesheet' href='<?= BASE_URL ?>/www/css/bootstrap.min.css' />
+            <link type='text/css' rel='stylesheet' href='<?= BASE_URL ?>/www/css/style.css' />
+            <link rel="shortcut icon" href="<?= BASE_URL ?>/www/img/bg-icon.png" type="image/x-icon">
+
 
             <!-- Favicon -->
-            <link href="<?= BASE_URL ?>/www/img/favicon.ico" rel="icon">
+            <link href="<?= BASE_URL ?>/www/img/bg-icon.png" rel="icon">
 
             <!-- Google Web Fonts -->
             <link rel="preconnect" href="https://fonts.googleapis.com">
