@@ -17,7 +17,7 @@ class PastryDetail extends PastryIndexView
         $name = $pastry->getName();
         $price = number_format($pastry->getPrice(), 2);
         $category = $pastry->getCategory();
-        $availability = $pastry->getAvailability() ? "Available" : "Not Available";
+        $availability = $pastry->isInMenu() ? "Available" : "Not Available";
         $description = $pastry->getDescription();
         $image = $pastry->getImagePath();
 
